@@ -157,16 +157,32 @@
                                                                 <label class="labels">Application Letter</label>
                                                             </div>
                                                             <div class="col-sm viewb mb-2">
-                                                                <button style="" type="button"
-                                                                    class="btn btn-outline-primary">View</button>
+                                                                @if (empty($row['application_letter']))
+                                                                    <a class="btn btn-outline-primary">View
+                                                                        <span class="text-danger m-0"> (Empty)</span>
+                                                                    </a>
+                                                                @else
+                                                                    <a href="/assets/{{ $row['application_letter'] }}"
+                                                                        class="btn btn-outline-primary"
+                                                                        target="_blank">View
+                                                                    </a>
+                                                                @endif
                                                             </div>
                                                             <div class="w-100"></div>
                                                             <div class="col-sm">
                                                                 <label class="labels">Work Experience</label>
                                                             </div>
                                                             <div class="col-sm viewb mb-2">
-                                                                <button style="" type="button"
-                                                                    class="btn btn-outline-primary">View</button>
+                                                                @if (empty($row['work_experience']))
+                                                                    <a class="btn btn-outline-primary">View
+                                                                        <span class="text-danger m-0"> (Empty)</span>
+                                                                    </a>
+                                                                @else
+                                                                    <a href="/assets/{{ $row['work_experience'] }}"
+                                                                        class="btn btn-outline-primary"
+                                                                        target="_blank">View
+                                                                    </a>
+                                                                @endif
                                                             </div>
                                                             <div class="w-100"></div>
                                                             <div class="col-sm">
@@ -174,39 +190,63 @@
                                                                     Records</label>
                                                             </div>
                                                             <div class="col-sm viewb">
-                                                                <button style="" type="button"
-                                                                    class="btn btn-outline-primary">View</button>
+                                                                @if (empty($row['otr']))
+                                                                    <a class="btn btn-outline-primary">View
+                                                                        <span class="text-danger m-0"> (Empty)</span>
+                                                                    </a>
+                                                                @else
+                                                                    <a href="/assets/{{ $row['otr'] }}"
+                                                                        class="btn btn-outline-primary"
+                                                                        target="_blank">View
+                                                                    </a>
+                                                                @endif
                                                             </div>
                                                             <div class="w-100"></div>
                                                             <div class="col-sm">
                                                                 <label class="labels">Employment Certificates</label>
                                                             </div>
                                                             <div class="col-sm viewb">
-                                                                <button style="" type="button"
-                                                                    class="btn btn-outline-primary">View</button>
+                                                                @if (empty($row['employment_certificates']))
+                                                                    <a class="btn btn-outline-primary">View
+                                                                        <span class="text-danger m-0"> (Empty)</span>
+                                                                    </a>
+                                                                @else
+                                                                    <a href="/assets/{{ $row['employment_certificates'] }}"
+                                                                        class="btn btn-outline-primary"
+                                                                        target="_blank">View
+                                                                    </a>
+                                                                @endif
                                                             </div>
                                                             <div class="w-100"></div>
                                                             <div class="col-sm">
                                                                 <label class="labels">Training Certificates</label>
                                                             </div>
                                                             <div class="col-sm viewb mt-2">
-                                                                <button style="" type="button"
-                                                                    class="btn btn-outline-primary">View</button>
+                                                                @if (empty($row['training_certificates']))
+                                                                    <a class="btn btn-outline-primary">View
+                                                                        <span class="text-danger m-0"> (Empty)</span>
+                                                                    </a>
+                                                                @else
+                                                                    <a href="/assets/{{ $row['training_certificates'] }}"
+                                                                        class="btn btn-outline-primary"
+                                                                        target="_blank">View
+                                                                    </a>
+                                                                @endif
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-12"><label
                                                             class="labels">Eligibility</label><input type="text"
                                                             class="form-control" placeholder="enter eligibility"
-                                                            value="{{ $row['mobile_number'] }}"></div>
+                                                            value="{{ $row['eligibility'] }}"></div>
                                                     <div class="col-md-12"><label class="labels">Performance
                                                             Evaluation</label><input type="text"
                                                             class="form-control" placeholder="enter evaluation"
-                                                            value="{{ $row['mobile_number'] }}"></div>
+                                                            value="{{ $row['performance_evaluation'] }}"></div>
                                                     <div class="col-md-12"><label class="labels">Status</label><input
                                                             type="text" class="form-control"
-                                                            placeholder="enter status"
-                                                            value="{{ $row['mobile_number'] }}"></div> <br>
+                                                            placeholder="enter status" value="{{ $row['status'] }}">
+                                                    </div> <br>
                                                     <label for="remarks">Remarks</label>
                                                     <textarea class="form-control" id="remarks" rows="5"></textarea>
                                                 </div>
@@ -230,9 +270,9 @@
 
     <script>
         /*$(document).on("click", ".user_dialog", function(){
-                                                                                                    var fname = $(this).data('id');
-                                                                                                    $(".modal-body #name").val(fname);
-                                                                                                });**/
+                                                                                                                                                                                                                                                                                                                var fname = $(this).data('id');
+                                                                                                                                                                                                                                                                                                                $(".modal-body #name").val(fname);
+                                                                                                                                                                                                                                                                                                            });**/
 
         // When the user clicks on <span> (x), close the modal
         //span.onclick = function() {
