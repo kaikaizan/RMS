@@ -51,13 +51,15 @@
                                 <td>{{ $row['email'] }}</td>
                                 <td>{{ $row['mobile_number'] }}</td>
                                 <td>
-                                    <a data-bs-toggle="modal" data-id="{{ $row->applicant_id }}" href="#myModal"
+                                    <a data-bs-toggle="modal" data-id="{{ $row->applicant_id }}"
+                                        href="#applicantModal{{ $row->id }}"
                                         class="view_applicant btn btn-info">View</a>
                                 </td>
                             </tr>
 
                             <!-- Modal -->
-                            <div id="myModal" class="modal fade " role="dialog" aria-hidden="true">
+                            <div id="applicantModal{{ $row->id }}" class="modal fade " role="dialog"
+                                aria-hidden="true">
 
                                 <div class="modal-dialog modal-xl">
                                     <!-- Modal content -->
@@ -270,9 +272,9 @@
 
     <script>
         /*$(document).on("click", ".user_dialog", function(){
-                                                                                                                                                                                                                                                                                                                var fname = $(this).data('id');
-                                                                                                                                                                                                                                                                                                                $(".modal-body #name").val(fname);
-                                                                                                                                                                                                                                                                                                            });**/
+                                                                                                                                                                                                                                                                                                                                                var fname = $(this).data('id');
+                                                                                                                                                                                                                                                                                                                                                $(".modal-body #name").val(fname);
+                                                                                                                                                                                                                                                                                                                                            });**/
 
         // When the user clicks on <span> (x), close the modal
         //span.onclick = function() {
